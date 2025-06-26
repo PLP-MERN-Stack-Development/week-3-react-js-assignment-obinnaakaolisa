@@ -6,7 +6,7 @@ const PostList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+    fetch('https://jsonplaceholder.typicode.com/posts?_limit=20')
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .finally(() => setLoading(false));
@@ -26,16 +26,16 @@ const PostList = () => {
       />
 
       {loading ? (
-        <p>Loading...</p>
+        <p className="text-gray-500 dark:text-gray-400">Loading...</p>
       ) : (
-        <ul className="space-y-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
           {filtered.map((post) => (
-            <li key={post.id} className="p-4 border rounded dark:border-gray-600">
-              <h3 className="font-semibold">{post.title}</h3>
+            <div key={post.id} className="bg-white dark:bg-gray-800 p-4 rounded shadow border dark:border-gray-700">
+              <h3 className="font-semibold mb-2">{post.title}</h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">{post.body}</p>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   );
