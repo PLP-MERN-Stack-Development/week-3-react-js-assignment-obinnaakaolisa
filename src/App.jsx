@@ -1,4 +1,6 @@
 import TaskManager from './components/TaskManager';
+import PostList from './components/PostList';
+
 
 function App() {
   return (
@@ -16,10 +18,9 @@ function App() {
 
         <section className="mt-12">
           <h2 className="text-2xl font-bold mb-4">API Data</h2>
-          <p className="text-gray-500 dark:text-gray-400">
-            Fetch and display external API data.
-          </p>
+          <PostList />
         </section>
+
       </main>
 
       {/* Footer */}
