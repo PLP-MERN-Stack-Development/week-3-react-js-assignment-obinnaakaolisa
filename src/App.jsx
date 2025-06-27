@@ -1,6 +1,6 @@
 import TaskManager from './components/TaskManager';
 import PostList from './components/PostList';
-
+import ThemeSwitcher from './components/ThemeSwitcher';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <header className="bg-white dark:bg-gray-800 shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 flex justify-between items-center">
           <h1 className="text-3xl font-bold">PLP Task Manager</h1>
+          <ThemeSwitcher />
         </div>
       </header>
 

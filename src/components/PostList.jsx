@@ -6,7 +6,7 @@ const PostList = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts?_limit=20')
+    fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
       .then((res) => res.json())
       .then((data) => setPosts(data))
       .finally(() => setLoading(false));
