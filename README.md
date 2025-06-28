@@ -1,71 +1,66 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19780643&assignment_repo_type=AssignmentRepo)
-# React.js and Tailwind CSS Assignment
+# React Task Manager ✅
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+This is a simple and responsive Task Manager application built with:
 
-## Assignment Overview
+- **React.js (Vite)**
+- **Tailwind CSS**
+- **Component-based architecture**
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+It allows users to add, delete, and manage tasks efficiently with a clean user interface.
 
-## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
+## 🚀 Live Demo
 
-## Files Included
+👉 [Click here to view the live app](https://react-task-manager-zeta.vercel.app/)
 
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
 
-## Requirements
-
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
+├── api/             # API integration functions (Posts from jsonplaceholder)
+├── components/      # Reusable UI components
 ├── context/         # React context providers
-├── api/             # API integration functions
+├── hooks/           # Custom React hooks
+├── pages/           # Page components
 ├── utils/           # Utility functions
-└── App.jsx          # Main application component
+|── App.jsx          # Main application component
+├── index.css        # Tailwind CSS configuration
+├── Layout/          # App Layout
+└── main.jsx         # App entry point
 ```
 
-## Submission
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+## 🛠️ Setup Instructions
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+To run the project locally:
 
-## Resources
+```bash
+# Clone the repo
+git clone https://github.com/PLP-MERN-Stack-Development/week-3-react-js-assignment-obinnaakaolisa.git
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+# Navigate into the project
+cd week-3-react-js-assignment-obinnaakaolisa
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+
+## 🧾 Assignment Context
+
+This project was submitted as **Week 3 Assignment** for the **React.js Module** under the Software Development course *(MERN stack specialisation)*.
+
+It demonstrates:
+
+- Clean and modular React component structure  
+- Use of Tailwind CSS for styling  
+- Functional task management features  
+
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
