@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
+import { fetchPosts } from '../api/fetchPosts';
+import Card from '../components/Card';
+import PropTypes from 'prop-types';
 
 const PostList = () => {
   const [posts, setPosts] = useState([]);
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/posts?_limit=6')
-      .then((res) => res.json())
-      .then((data) => setPosts(data))
-      .finally(() => setLoading(false));
+    fetchPosts(6)
+    .then(setPosts)
+    .catch(() => setError(true))
+    .finally(() => setLoading(false));
   }, []);
 
   const filtered = posts.filter((post) =>
@@ -30,10 +34,9 @@ const PostList = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
           {filtered.map((post) => (
-            <div key={post.id} className="bg-white dark:bg-gray-800 p-4 rounded shadow border dark:border-gray-700">
-              <h3 className="font-semibold mb-2">{post.title}</h3>
+            <Card key={post.id} title={post.title}>
               <p className="text-sm text-gray-600 dark:text-gray-400">{post.body}</p>
-            </div>
+            </Card>
           ))}
         </div>
       )}
